@@ -1,0 +1,43 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+    <mat-toolbar><img class="main-logo" src="assets/images/logo.png" alt=""></mat-toolbar>
+    <mat-nav-list *ngFor="let elem of menu">
+      <a mat-list-item class="link-navigation"  routerLink="/{{elem.link}}" routerLinkActive="active"><img class="icon-link"src="assets/icons/{{elem.icon}}" alt="">{{elem.menu}}</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <button mat-icon-button (click)="drawer.toggle()" value="sidebarclosed">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-icon-button class="srh-btn">
+        <mat-icon>search</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      <div class="navigation-right">
+          <button class="button-menu" mat-stroked-button color=""><img src="assets/icons/plus.png" alt=""> &nbsp; Add project</button>
+          <button mat-icon-button class="srh-btn">
+              <mat-icon>email</mat-icon>
+            </button>
+        <button mat-icon-button class="srh-btn notification">
+          <mat-icon matBadge="3" matBadgeColor="primary" >notifications</mat-icon>
+        </button>
+        <button mat-icon-button class="m-r-5">
+            <img src="assets/images/users/1.jpg" alt="user" class="profile-pic"> </button>
+        
+            <button mat-icon-button class="">
+                <mat-icon class="srh-btn">arrow_drop_down</mat-icon>
+              </button>    <!-- <span class="example-spacer"></span> -->
+        
+        
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

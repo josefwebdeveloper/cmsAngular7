@@ -1,0 +1,174 @@
+<div class="comtainer">
+<h1 class="main-user">Hello {{user}}!</h1>
+<!-- <mat-card>
+  <mat-card-content>
+      <mat-card-title>Messages</mat-card-title>
+      <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle>
+      <div class="mailbox message-widget">
+          <div class="message-center">
+              <a href="#" *ngFor="let mymessage of mymessages">
+                  <div class="user-img">
+                      <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
+                      <span class="profile-status {{mymessage.status}} pull-right"></span>
+                  </div>
+                  <div class="mail-content">
+                      <h5>{{mymessage.from}}</h5>
+                      <span class="mail-desc">{{mymessage.subject}}</span>
+                      <span class="time">{{mymessage.time}}</span>
+                  </div>
+              </a>
+          </div>
+      </div>
+
+  </mat-card-content>
+</mat-card> -->
+<div class="charts-wrapper ">
+
+    <mat-card class="pie-chart_wrapper">
+        <div class="total_wrapper">
+            <div class="total-sign">1,560</div>
+            <div class="total-sign text-muted">Sales</div>
+        </div>
+        <div class="wrapper-header-pie">
+            <div class="text-sign">Your Sales</div>
+            <div class="button-pie">
+                <button class="button-menu" mat-stroked-button color=""> <span class="text-unshine">Period:</span>
+                    <span> Last Year </span>&nbsp;&nbsp;&nbsp;<img src="assets/icons/arrow.png" alt=""></button>
+
+            </div>
+        </div>
+        <div class="wrapper-chart">
+            <div class="text-center">
+                <canvas baseChart class="m-auto" width="230" height="230" [data]="doughnutChartData" [labels]="doughnutChartLabels"
+                    [legend]="doughnutChartLegend" [options]="doughnutChartOptions" [chartType]="doughnutChartType"
+                    [colors]="[{backgroundColor: ['#25396e', '#5584ff', '#4b74e0','#3755a4','#4164c2']}]"></canvas>
+            </div>
+
+            <ul class=" bullits">
+                <li>
+                    <h6 class="m-0">
+                        <i style="color:#25396e; " class="fa fa-circle font-10 m-r-10 "></i><span class="text-muted">Websites</span></h6>
+                </li>
+                <li>
+                    <h6 class="   m-0">
+                        <i style="color:#5584ff;" class="fa fa-circle font-10 m-r-10"></i><span class="text-muted">Logo</span></h6>
+                </li>
+                <li>
+                    <h6 class="   m-0">
+                        <i style="color:#4b74e0;" class="fa fa-circle font-10 m-r-10"></i><span class="text-muted">Social
+                            Media</span></h6>
+                </li>
+                <li>
+                    <h6 class="    m-0">
+                        <i style="color:#3755a4;" class="fa fa-circle font-10 m-r-10"></i><span class="text-muted">Adwords</span></h6>
+                </li>
+                <li>
+                    <h6 class="   m-0">
+                        <i style="color:#4164c2;" class="fa fa-circle font-10 m-r-10"></i><span class="text-muted">E-Commerce</span></h6>
+                </li>
+            </ul>
+        </div>
+
+    </mat-card>
+
+    <mat-card class="second-chart-wrapper ">
+        <div class="wrapper-header-pie">
+            <div class="text-sign">Report</div>
+            <div class="button-pie">
+                <button class="button-menu" mat-stroked-button color=""> <span class="text-unshine">Period:</span>
+                    <span> Last Year </span>&nbsp;&nbsp;&nbsp;<img src="assets/icons/arrow.png" alt=""></button>
+
+            </div>
+        </div>
+
+        <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+
+    </mat-card>
+    <!-- </div> -->
+
+
+</div>
+<!-- <div class="container"> -->
+    <div class=" wrapper-social-main">
+        <div class="wrapper-social ">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title>Messages</mat-card-title>
+                    <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle>
+                    <div class="mailbox message-widget">
+                        <div class="message-center">
+                            <a href="#" *ngFor="let mymessage of mymessages">
+                                <div class="user-img">
+                                    <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
+                                    <span class="profile-status {{mymessage.status}} pull-right"></span>
+                                </div>
+                                <div class="mail-content">
+                                    <h5>{{mymessage.from}}</h5>
+                                    <span class="mail-desc">{{mymessage.subject}}</span>
+                                    <span class="time">{{mymessage.time}}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="wrapper-social ">
+                <!-- [class.select]="mymessage.select" (click)="select(mymessage)" -->
+            <mat-card>
+                <mat-card-content>
+                    <div class="wrapper-header-message">
+                    <mat-card-title>Messages</mat-card-title> <span class="badge-message" matBadge="{{countMessage}}" matBadgeOverlap="false"></span>
+                </div>
+                    <!-- <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle> -->
+                    <hr>
+                    <div class="mailbox message-widget">
+                        <div class="message-center" > 
+                            <a  *ngFor="let mymessage of mymessages" (click)="select(mymessage)" [ngClass]="mymessage.select ? 'select' : 'info'"  >{{mymessage.select}}
+                                <div class="user-img">
+                                    <img src="{{mymessage.useravatar}}" alt="user"  class="img-circle" width="40">
+                                    <span class="profile-status {{mymessage.status}} pull-right"></span>
+                                </div>
+                                <div class="mail-content">
+                                    <h5>{{mymessage.from}}</h5>
+                                    <span class="mail-desc">{{mymessage.subject}}</span>
+                                    <span class="time">{{mymessage.time}}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="wrapper-social ">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title>Messages</mat-card-title>
+                    <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle>
+                    <div class="mailbox message-widget">
+                        <div class="message-center">
+                            <a href="#" *ngFor="let mymessage of mymessages">
+                                <div class="user-img">
+                                    <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
+                                    <span class="profile-status {{mymessage.status}} pull-right"></span>
+                                </div>
+                                <div class="mail-content">
+                                    <h5>{{mymessage.from}}</h5>
+                                    <span class="mail-desc">{{mymessage.subject}}</span>
+                                    <span class="time">{{mymessage.time}}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </mat-card-content>
+            </mat-card>
+        </div>
+    <!-- </div> -->
+</div>
+</div>
