@@ -8,64 +8,103 @@ export const Menu=[
 
   
 ]
+
+
+
 export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/1.jpg',
     status: 'online',
     from: 'Pavan kumar',
     subject: 'Just see the my admin!',
-    time: '9:30 AM',
-    id:1
+    time: 'About 10 hours ago',
+    id:1,
+    select:true,
+    project:'Free UI Kit',
+    timeActivity:'Just now',
+    tasksProject:'new website for Symu.co',
+    timeStatus: -5
   },
   {
     useravatar: 'assets/images/users/2.jpg',
     status: 'busy',
     from: 'Sonu Nigam',
     subject: 'I have sung a song! See you at',
-    time: '9:10 AM',
-    id:2
+    time: 'About 20 hours ago',
+    id:2,
+    select:true,
+    project:'Symu Website ',
+    timeActivity:'40 mitutes ago',
+    tasksProject:'Free business PSD Template ',
+    timeStatus: -4
   },
   {
     useravatar: 'assets/images/users/3.jpg',
     status: 'away',
     from: 'Arijit Sinh',
     subject: 'I am a singer!',
-    time: '9:08 AM', id:3
+    time: '5 minutw ago', id:3,
+    select:true,
+    project:'Free PSD Template',
+    timeActivity:'1 hours ago',
+    tasksProject:'New logo for JCD.pl',
+    timeStatus: -3
   },
   {
     useravatar: 'assets/images/users/4.jpg',
     status: 'busy',
     from: 'Sonu Nigam',
     subject: 'I have sung a song! See you at',
-    time: '9:10 AM', id:4
+    time: '8 minute ago', id:4,
+    select:true,
+    project:'Free PSD (...)',
+    timeActivity:'2 hours ago',
+    tasksProject:'Free Icons Set vol. 3',
+    timeStatus: 1
   },
   {
     useravatar: 'assets/images/users/6.jpg',
     status: 'away',
     from: 'Arijit Sinh',
     subject: 'I am a singer!',
-    time: '9:08 AM', id:5
+    time:'9 minute ago', id:5,
+    project:'Free UI Kit',
+    timeActivity:'3 hours ago',
+    tasksProject:'great website for Symu.co',
+    timeStatus: 2
   },
   {
     useravatar: 'assets/images/users/7.jpg',
     status: 'busy',
     from: 'Sonu Nigam',
     subject: 'I have sung a song! See you at',
-    time: '9:10 AM', id:6
+    time: '6 minute ago', id:6,
+    project:'Free UI Kit',
+    timeActivity:'4 hours ago',
+    tasksProject:'New website for Symu.co',
+    timeStatus: 4
   },
   {
     useravatar: 'assets/images/users/8.jpg',
     status: 'away',
     from: 'Arijit Sinh',
     subject: 'I am a singer!',
-    time: '9:08 AM', id:7
+    time: '18 minutw ago', id:7,
+    project:'Free UI Kit',
+    timeActivity:'7 hours ago',
+    tasksProject:'new website for Symu.co',
+    timeStatus: 5
   },
   {
     useravatar: 'assets/images/users/6.jpg',
     status: 'offline',
     from: 'Pavan kumar',
     subject: 'Just see the my admin!',
-    time: '9:00 AM', id:8
+    time: '7 minutw ago', id:8,
+    project:'Free UI Kit',
+    timeActivity:'10 hours ago',
+    tasksProject:'New website for Symu.co',
+    timeStatus: 8
   }
 ];
 export var single = [

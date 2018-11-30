@@ -12,7 +12,7 @@
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <button mat-icon-button (click)="drawer.toggle()" value="sidebarclosed">
+      <button mat-icon-button class="menu-button" (click)="drawer.toggle()" value="sidebarclosed">
         <mat-icon>menu</mat-icon>
       </button>
       <button mat-icon-button class="srh-btn">

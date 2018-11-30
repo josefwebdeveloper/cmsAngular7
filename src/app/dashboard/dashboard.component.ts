@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{Mymessages} from '../data'
+import { Mymessages } from '../data'
 
 @Component({
   selector: 'app-calendar',
@@ -7,27 +7,42 @@ import{Mymessages} from '../data'
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-    user='John';
-    mymessages=Mymessages;
-
+  user = 'John';
+  mymessages
+  delay=0;
   constructor() { }
 
   ngOnInit() {
+    this.mymessages = Mymessages;
+    this.getFirstLetter()
   }
- // Doughnut
- public doughnutChartLabels: string[] = ['Websites', 'Logo', ' Social Media','Adwords',' E-Commerce'];
- public doughnutChartOptions: any = {
-   responsive: false
- };
 
- public doughnutChartData: number[] = [350, 450, 100,123,537];
- public doughnutChartType = 'doughnut';
- public doughnutChartLegend = false;
-// 
-//lineChart
+  getFirstLetter() {
+    this.mymessages = this.mymessages.map(item => {
+      if (item.timeStatus<0){
+        this.delay+=1;
+        item.delay=item.timeStatus*(-1);
+        console.log("item",item.delay);
+      }
+        item.taskLetter = item.tasksProject.charAt(0).toUpperCase();
+      //  console.log("item",item);
+      return item;
+    })
+  }
+  // Doughnut
+  public doughnutChartLabels: string[] = ['Websites', 'Logo', ' Social Media', 'Adwords', ' E-Commerce'];
+  public doughnutChartOptions: any = {
+    responsive: false
+  };
+
+  public doughnutChartData: number[] = [350, 450, 100, 123, 537];
+  public doughnutChartType = 'doughnut';
+  public doughnutChartLegend = false;
+  // 
+  //lineChart
   public lineChartData: Array<any> = [
     { data: [65, 39, 80, 15, 76, 35, 40], label: 'Series A' }
-    
+
   ];
   public lineChartLabels: Array<any> = [
     '',
@@ -72,13 +87,13 @@ export class DashboardComponent implements OnInit {
   public chartHovered(e: any): void {
     // console.log(e);
   }
-  countMessage=0;
-  select(mymessage){
+  countMessage = 4;
+  select(mymessage) {
     // console.log(this.status);
-    mymessage.select = !mymessage.select; 
-    if(mymessage.select){
-    this.countMessage+=1;
-    }else  this.countMessage-=1;
+    mymessage.select = !mymessage.select;
+    if (mymessage.select) {
+      this.countMessage += 1;
+    } else this.countMessage -= 1;
 
   }
 }
