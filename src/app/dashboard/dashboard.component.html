@@ -1,27 +1,6 @@
 <div class="comtainer">
     <h1 class="main-user">Hello {{user}}!</h1>
-    <!-- <mat-card>
-  <mat-card-content>
-      <mat-card-title>Messages</mat-card-title>
-      <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle>
-      <div class="mailbox message-widget">
-          <div class="message-center">
-              <a href="#" *ngFor="let mymessage of mymessages">
-                  <div class="user-img">
-                      <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
-                      <span class="profile-status {{mymessage.status}} pull-right"></span>
-                  </div>
-                  <div class="mail-content">
-                      <h5>{{mymessage.from}}</h5>
-                      <span class="mail-desc">{{mymessage.subject}}</span>
-                      <span class="time">{{mymessage.time}}</span>
-                  </div>
-              </a>
-          </div>
-      </div>
-
-  </mat-card-content>
-</mat-card> -->
+   
     <div class="charts-wrapper ">
 
         <mat-card class="pie-chart_wrapper">
@@ -87,14 +66,14 @@
             </canvas>
 
         </mat-card>
-        <!-- </div> -->
+      
 
 
     </div>
-    <!-- <div class="container"> -->
+   
     <div class=" wrapper-social-main">
         <div class="wrapper-social tasks ">
-            <!-- [class.select]="mymessage.select" (click)="select(mymessage)" -->
+            
             <mat-card>
                 <mat-card-content>
                     <div class="wrapper-header-message">
@@ -104,8 +83,7 @@
                                 class="badge-red"> <span class="badge-message " matBadge="{{delay}}" matBadgeOverlap="false"></span></span>
                         </div>
                     </div>
-                    <!-- <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle> -->
-                    <!-- <hr> -->
+                
                     <div class="mailbox message-widget top-mailbox">
                         <div class="message-center">
                             <a *ngFor="let mymessage of mymessages" class="list-component">
@@ -135,8 +113,7 @@
 
                                     </div>
                                     <div class="wrapper-icons-message">
-                                        <!-- <img class="link" src="assets/icons/return.png" alt="return"> -->
-                                        <!-- <img class="link ml-2" src="assets/icons/settings-message.png" alt="setting-message"> -->
+                                    
                                     </div>
                                 </div>
                                 <div class="to-right"><img src="/assets/icons/dots.png" alt="dots"></div>
@@ -156,8 +133,7 @@
                         <mat-card-title>Messages</mat-card-title> <span class="badge-message" matBadge="{{countMessage}}"
                             matBadgeOverlap="false"></span>
                     </div>
-                    <!-- <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle> -->
-                    <!-- <hr> -->
+                  
                     <div class="mailbox message-widget top-mailbox">
                         <div class="message-center">
                             <a *ngFor="let mymessage of mymessages" (click)="select(mymessage)" [ngClass]="mymessage.select ? 'select' : 'info'">
@@ -183,15 +159,14 @@
             </mat-card>
         </div>
         <div class="wrapper-social ">
-            <!-- [class.select]="mymessage.select" (click)="select(mymessage)" -->
+          
             <mat-card>
                 <mat-card-content>
                     <div class="wrapper-header-message activity-component">
                         <mat-card-title>Activity</mat-card-title> <span class="badge-message" matBadge="8"
                             matBadgeOverlap="false"></span>
                     </div>
-                    <!-- <mat-card-subtitle>Latest Messages on users from Material</mat-card-subtitle> -->
-                    <!-- <hr> -->
+           
                     <div class="mailbox message-widget top-mailbox">
                         <div class="message-center">
 
@@ -208,14 +183,13 @@
                                         <span class="name-message">{{mymessage.from}}</span><span class="time ml-1 mr-1">added
                                             a new project</span><span class=" message-message">{{mymessage.project}}</span>
                                     </div>
-                                    <!-- <span class=" message-message">{{mymessage.subject}}</span> -->
+                                    
                                     <div class="wrapper-name-time">
                                         <span><img class="link" src="assets/icons/watch.png" alt="watch"> </span> <span
                                             class="time ml-1">{{mymessage.timeActivity}}</span>
                                     </div>
                                     <div class="wrapper-icons-message">
-                                        <!-- <img class="link" src="assets/icons/return.png" alt="return"> -->
-                                        <!-- <img class="link ml-2" src="assets/icons/settings-message.png" alt="setting-message"> -->
+                                    
                                     </div>
                                 </div>
                             </a>

@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
       if (item.timeStatus<0){
         this.delay+=1;
         item.delay=item.timeStatus*(-1);
-        console.log("item",item.delay);
+        // console.log("item",item.delay);
       }
         item.taskLetter = item.tasksProject.charAt(0).toUpperCase();
       //  console.log("item",item);
