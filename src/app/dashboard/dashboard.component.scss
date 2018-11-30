@@ -166,9 +166,16 @@ mat-card-title {
         top: 8px; // width: 10px;
         color: white; // font-weight: bold;
     }
-    .delay{
+    .delay {
         color: red !important;
     }
+}
+
+.message-special {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    // width: 100px;
 }
 
 .to-right {
@@ -188,26 +195,21 @@ mat-card-title {
 //   z-index: -1;
 // }
 .vl {
-    border-left: 1px solid #dadee7;
-    // border-left:8px rbba(255,255,255,.6) solid;
+    border-left: 1px solid #dadee7; // border-left:8px rbba(255,255,255,.6) solid;
     height: 100px;
     position: absolute;
     left: 50%;
     margin-left: -0.5px;
     top: 0;
     z-index: -1;
-   
 }
-.activity-component{
-    .message-center{
+
+.activity-component {
+    .message-center {
         height: 100%;
         overflow: hidden;
-       
-      
     }
 }
-
-
 
 .user-image-avatar {
     z-index: 20;

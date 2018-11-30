@@ -15,7 +15,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/1.jpg',
     status: 'online',
-    from: 'Pavan kumar',
+    from: 'Dan Smith',
     subject: 'Just see the my admin!',
     time: 'About 10 hours ago',
     id:1,
@@ -28,7 +28,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/2.jpg',
     status: 'busy',
-    from: 'Sonu Nigam',
+    from: 'Sony Cohen',
     subject: 'I have sung a song! See you at',
     time: 'About 20 hours ago',
     id:2,
@@ -41,7 +41,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/3.jpg',
     status: 'away',
-    from: 'Arijit Sinh',
+    from: 'April Doe',
     subject: 'I am a singer!',
     time: '5 minutw ago', id:3,
     select:true,
@@ -53,7 +53,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/4.jpg',
     status: 'busy',
-    from: 'Sonu Nigam',
+    from: 'Sony Nigam',
     subject: 'I have sung a song! See you at',
     time: '8 minute ago', id:4,
     select:true,
@@ -65,7 +65,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/6.jpg',
     status: 'away',
-    from: 'Arijit Sinh',
+    from: 'Anna Smith',
     subject: 'I am a singer!',
     time:'9 minute ago', id:5,
     project:'Free UI Kit',
@@ -76,7 +76,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/7.jpg',
     status: 'busy',
-    from: 'Sonu Nigam',
+    from: 'Swen Cohen',
     subject: 'I have sung a song! See you at',
     time: '6 minute ago', id:6,
     project:'Free UI Kit',
@@ -87,7 +87,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/8.jpg',
     status: 'away',
-    from: 'Arijit Sinh',
+    from: 'Anna Doe',
     subject: 'I am a singer!',
     time: '18 minutw ago', id:7,
     project:'Free UI Kit',
@@ -98,7 +98,7 @@ export const Mymessages: Object[] = [
   {
     useravatar: 'assets/images/users/6.jpg',
     status: 'offline',
-    from: 'Pavan kumar',
+    from: 'Sara Doe',
     subject: 'Just see the my admin!',
     time: '7 minutw ago', id:8,
     project:'Free UI Kit',

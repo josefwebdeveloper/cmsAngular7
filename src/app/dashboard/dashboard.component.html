@@ -170,7 +170,7 @@
                     <div class="mailbox message-widget top-mailbox">
                         <div class="message-center">
 
-                            <a *ngFor="let mymessage of mymessages" class="list-component" style=" border-bottom:none;">
+                            <a *ngFor="let mymessage of mymessages" class="list-component" style=" border-bottom:none;max-height: 84px;">
                                 <div class="user-img  user-image-avatar ">
                                     <img src="{{mymessage.useravatar}}" alt="user" class="img-circle user-image-avatar"
                                         width="40">
@@ -180,10 +180,10 @@
                                 </div>
                                 <div class="mail-content">
                                     <div class="wrapper-name-time">
-                                        <span class="name-message">{{mymessage.from}}</span><span class="time ml-1 mr-1">added
-                                            a new project</span><span class=" message-message">{{mymessage.project}}</span>
+                                        <span class="name-message">{{mymessage.from}}</span><span class="time ml-2">added
+                                            a new project</span>
                                     </div>
-                                    
+                                    <span class=" message-message message-special">{{mymessage.project}}</span>
                                     <div class="wrapper-name-time">
                                         <span><img class="link" src="assets/icons/watch.png" alt="watch"> </span> <span
                                             class="time ml-1">{{mymessage.timeActivity}}</span>
